@@ -1,0 +1,37 @@
+@import "../../styles/colors.scss";
+@import "../Input/style.scss";
+
+/*#region Search Component Codes*/
+
+%search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    #search-icon {
+        width: 4.9rem;
+        height: 4.9rem;
+        border-radius: 0.8rem;
+        background-color: $greySoft;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            font-size: 1.8rem;
+            color: $grey;
+            color: 0.3s ease;
+        }
+    }
+
+    #search-content {
+        width: 100%;
+
+        .control-input {
+            @extend %input;
+        }
+    }
+}
+
+/*#endregion*/

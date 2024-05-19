@@ -1,0 +1,25 @@
+@import "../../styles/colors.scss";
+
+/*#region Input Component Codes*/
+
+%input {
+    width: 100%;
+
+    input {
+        width: 100%;
+        padding: 1.25rem 1.5rem;
+        border: 0.1rem solid $greySoft;
+        border-radius: 0.8rem;
+        outline: none;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $black;
+
+        &::placeholder {
+            color: $grey;
+            font-weight: 500;
+        }
+    }
+}
+
+/*#endregion*/

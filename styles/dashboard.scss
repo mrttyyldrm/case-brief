@@ -1,0 +1,115 @@
+@import "./styles/colors.scss";
+@import "../components/Button/style.scss";
+@import "../components/Menu/style.scss";
+@import "../components/Search/style.scss";
+@import "../components/Table/style.scss";
+@import "../components/Modal/style.scss";
+
+/*#region Header Codes*/
+
+header {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    background-color: $white;
+    box-shadow: 0 0.2rem 0.4rem -0.2rem rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: 25rem 1fr 25rem;
+    align-items: center;
+    gap: 2rem;
+
+    #header-title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.5rem;
+
+        #title-icon {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 0.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primarySoft;
+
+            i {
+                font-size: 1.8rem;
+                color: $primary;
+            }
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: $black;
+        }
+    }
+
+    nav#header-filter {
+        ul {
+            @extend %menu;
+        }
+    }
+
+    #header-button {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            @extend %button;
+        }
+    }
+}
+
+/*#endregion*/
+
+/*#region Main Codes*/
+
+main {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    background-color: $white;
+    box-shadow: 0 0.2rem 0.4rem -0.2rem rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+
+    #main-navigation {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 0.1rem solid $greySoft;
+
+        #navigation-search {
+            article#search {
+                @extend %search;
+            }
+        }
+
+        #navigation-button {
+            button {
+                @extend %button;
+            }
+        }
+    }
+
+    #main-table {
+        table {
+            @extend %table;
+        }
+    }
+}
+
+/*#endregion*/
+
+/*#region Modal Codes*/
+
+section#modal {
+    @extend %modal;
+}
+
+/*#endregion*/

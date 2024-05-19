@@ -1,0 +1,84 @@
+@import "../../styles/colors.scss";
+
+/*#region Button Component Codes*/
+
+%button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 1.5rem 2.5rem;
+    border-radius: 0.8rem;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: lighten($primary, 10%);
+    }
+
+    &.error {
+        background-color: $error;
+
+        &:hover {
+            background-color: lighten($error, 10%);
+        }
+    }
+
+    &.secondary {
+        background-color: $greySoft;
+
+        &:hover {
+            background-color: darken($greySoft, 5%);
+        }
+
+        i,
+        p {
+            color: $grey;
+        }
+    }
+
+    &.passive {
+        cursor: default;
+        background-color: $greySoft;
+
+        &:hover {
+            background-color: $greySoft;
+        }
+
+        i,
+        p {
+            color: $grey;
+        }
+    }
+
+    &.icon {
+        padding: 0;
+        width: 4.9rem;
+        height: 4.9rem;
+
+        &.small {
+            width: 4rem;
+            height: 4rem;
+
+            i {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    i {
+        font-size: 1.6rem;
+        color: $white;
+    }
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $white;
+    }
+}
+
+/*#endregion*/

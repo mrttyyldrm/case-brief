@@ -1,0 +1,85 @@
+@import "../../styles/colors.scss";
+
+/*#region Select Component Codes*/
+
+%select {
+    position: relative;
+
+    .select-input {
+        cursor: pointer;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 0.1rem;
+        padding: 1.25rem 1.5rem;
+        border: 0.1rem solid $greySoft;
+        border-radius: 0.8rem;
+
+        input {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $black;
+
+            &::placeholder {
+                color: $grey;
+                font-weight: 500;
+            }
+        }
+
+        i {
+            font-size: 1.4rem;
+            color: $grey;
+        }
+    }
+
+    ul.select-options {
+        position: absolute;
+        top: 5.25rem;
+        left: 0;
+        width: 100%;
+        background-color: $white;
+        border: 0.15rem solid $greySoft;
+        box-shadow: 0 0.2rem 0.4rem -0.2rem rgba(0, 0, 0, 0.15);
+        border-radius: 0.8rem;
+        padding: 0.8rem;
+
+        li {
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+            width: 100%;
+            padding: 1.5rem;
+            border-radius: 0.8rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: $grey;
+            transition-property: background-color, color;
+            transition: 0.3s ease;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.active {
+                font-weight: 600;
+                background-color: $primarySoft;
+                color: $primary;
+
+                &:hover {
+                    font-weight: 600;
+                    background-color: $primarySoft;
+                    color: $primary;
+                }
+            }
+
+            &:hover {
+                background-color: $greySoft;
+            }
+        }
+    }
+}
+
+/*#endregion*/
